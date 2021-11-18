@@ -46,7 +46,7 @@ public class anularReserva extends HttpServlet {
 		// Recogemos número de reserva a cancelar
 
 		int habitacion_n = Integer.parseInt(request.getParameter("habitacion_n"));
-
+		System.out.println("Habitacion" + habitacion_n);
 		// LLamamos al método de anulación de OperacionesDAO
 
 		try {
@@ -56,7 +56,7 @@ public class anularReserva extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		String pagina = "index.jsp";
+		String pagina = "resumenReserva.jsp";
 
 		RequestDispatcher rd = request.getRequestDispatcher(pagina);
 

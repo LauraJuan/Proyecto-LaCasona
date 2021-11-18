@@ -89,7 +89,7 @@ public class OperacionesDAO {
 
 			rs = pst.executeQuery();
 			if(rs.next()){
-				habitacion_n = rs.getInt(1);
+				habitacion_n = rs.getInt("habitacion_n");
 				
 			}
 			
@@ -97,14 +97,14 @@ public class OperacionesDAO {
 		//si si que hay habitacion disponible
 		if (habitacion_n != 0) {
 			
-			if (tipohab.equals("individual")) {
+			if (tipohab.equalsIgnoreCase("individual")) {
 				costo = 25;
 				preciotot = (float) (costo * dias);
-			} else if (tipohab.equals("matrimonial")) {
+			} else if (tipohab.equalsIgnoreCase("matrimonial")) {
 				costo = 50;
 				preciotot = (float) (costo * dias);
 				
-			} else if (tipohab.equals("doble")) {
+			} else if (tipohab.equalsIgnoreCase("doble")) {
 				costo = 55;
 				preciotot = (float) (costo * dias);
 			} else {
@@ -148,12 +148,13 @@ public class OperacionesDAO {
 	}
 
 	public static boolean anularReserva(int cliente_id, int habitacion_n) throws SQLException {
-
+		System.out.println(cliente_id);
+		System.out.println(habitacion_n);
 		boolean anu = false;
 		con = Conexion.getInstance().getConnection();
 
-		String sql = "DELETE FROM reserva WHERE cliente_id=? AND habitacion_n=?";// borrar la reserva
-		String sql1 = "UPDATE habitacion SET disponibilidad=? WHERE n_habitacion";// actualizar la bdd
+		String sql = "DELETE FROM reserva WHERE cliente_id=? AND habitacion_n = ?";// borrar la reserva
+		String sql1 = "UPDATE habitacion SET disponibilidad=? WHERE n_habitacion = ?";// actualizar la bdd
 
 		// tabla reserva borrar
 		pst = con.prepareStatement(sql);
@@ -162,10 +163,8 @@ public class OperacionesDAO {
 		pst.executeUpdate();
 
 		// tabla habitacion actualizando
-		hadao = new HabitacionDAO();
-		Habitacion hab = hadao.getHabitacion(habitacion_n);
-		pst2 = con.prepareStatement(sql1);
-		pst2.setString(1, hab.getDisponibilidad() + 1);
+		pst2=con.prepareStatement(sql1);
+		pst2.setString(1, "disponible");
 		pst2.setInt(2, habitacion_n);
 		pst2.executeUpdate();
 
@@ -209,6 +208,8 @@ public static List<Reserva> getReservaOfCliente(int cliente_id) throws SQLExcept
 			r.setNum_personas(rs.getInt("num_personas"));
 
 			r.setCliente_id(rs.getInt("cliente_id"));
+			
+			r.setHabitacion_n(rs.getInt("habitacion_n")); System.out.println("xxxii: " + rs.getInt("habitacion_n"));
 
 			r.setTipo(rs.getString("tipo"));
 
