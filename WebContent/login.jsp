@@ -5,12 +5,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/estilos.css">
 <script type="text/javascript" src="js/script.js" defer></script>
 <title>La Casona</title>
 </head>
 <body>
 
-
+<jsp:include page="header.jsp"></jsp:include><br>
 
 	<form action="Login" method="post">
 		<label>Email:</label> <input type="email" name="email"> <label>Pass:</label>

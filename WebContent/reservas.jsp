@@ -12,7 +12,7 @@
 <head>
 
 <meta charset="ISO-8859-1">
-
+<link rel="stylesheet" href="css/estilos.css">
 <title>Insert title here</title>
 
 </head>
@@ -33,7 +33,7 @@
 
 					<td>Fecha Reserva</td>
 
-					<td><input type="datetime" name="fecha_reserva"></td>
+					<td><input type="date" name="fecha_reserva"></td>
 
 				</tr>
 
@@ -41,7 +41,7 @@
 
 					<td>Fecha Entrada</td>
 
-					<td><input type="datetime" name="fecha_entrada"></td>
+					<td><input type="date" name="fecha_entrada"></td>
 
 				</tr>
 
@@ -49,7 +49,7 @@
 
 					<td>Fecha Salida</td>
 
-					<td><input type="datetime" name="fecha_salida"></td>
+					<td><input type="date" name="fecha_salida"></td>
 
 				</tr>
 

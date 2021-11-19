@@ -11,11 +11,13 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
+<link rel="stylesheet" href="css/header.css">
 <link rel="stylesheet" href="css/estilos.css">
 <title>Nuestro Hostal</title>
 </head>
 <body>
-	<h1>Nuestro Hostal</h1>
+<jsp:include page="header.jsp"></jsp:include><br>
+	<h2>Nuestro Hostal</h2><br><br>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">

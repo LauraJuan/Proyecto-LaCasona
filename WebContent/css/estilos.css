@@ -4,6 +4,7 @@
 * {
 	font-family: 'Indie Flower', cursive;
 	box-sizing: border-box;
+	color: #800040;
 }
 
 body {
@@ -17,17 +18,27 @@ body {
 }
 
 h1 {
-	font-size: 3.3em;
-	color: white;
+	margin:0px;
 	text-align:center;
-	text-shadow: 2px 2px 2px #FF0000;
+	background-position: center;
+	font-size: 4em;
+	
+}
+h3 {
+	margin:0px;
+	text-align:center;
+	background-position: center;
+	font-size: 2em;
+	
 }
 
 h2 {
-	color:white;
-	text-shadow: 2px 2px 2px #FF0000;
+	margin:0px;
+	text-align:center;
+	background-position: center;
+	font-size: 3em;
+	
 }
-
 
 table {
 	font-size: 0.8em;
@@ -45,18 +56,18 @@ tr:nth-child(even) {
 }
 
 tr:nth-child(odd) {
-	background-color: #fff6f6;
+	background-color: #ff7979;
 }
 
 tr:hover {
-	background-color: #e8a58f;
+	background-color: #f28484;
 }
 
 th {
 	padding-top: 12px;
 	padding-bottom: 12px;
 	text-align: left;
-	background-color: #992600;
+	background-color: #f4a8ef;
 	color: white;
 }
 
@@ -65,7 +76,7 @@ form {
     padding: 16px;
     border-radius: 10px;
     margin: 100px auto;
-    background-color: #e8a58f;
+    background-color: #fac5f0;
 }
 
 form label {
@@ -91,7 +102,7 @@ form input[type="submit"]{
     border-radius: 5px;
     display: block;
     color: #fff;
-    background-color: #992600;
+    background-color: #ee55ad;
 }
 
 

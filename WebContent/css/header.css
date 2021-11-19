@@ -2,7 +2,7 @@
 
 
 * {
-	font-family: "Trirong", serif;
+	font-family:'Indie Flower', cursive;
 	box-sizing: border-box;
 	
 }
@@ -18,4 +18,15 @@ body {
 
 h1 {
 	margin:0px;
+	text-align:center;
+	background-position: center;
+	font-size: 4em;
+	
+}
+
+h2 {
+	margin:0px;
+	background-position: center;
+	font-size: 2em;
+	
 }
